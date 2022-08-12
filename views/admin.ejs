@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <main class="main" id="app-clone">
+       
+        <input type="text" class="form__input" placeholder="Link Clone" v-model="linkClone">
+        <button type="button" class="form__btn" @click="onClone">Start Clone</button>
+          
+    </main>
+
+</body>
+<script>
+    var listMovie = new Vue({
+        el: "#app-clone",
+        data: {
+            linkClone:'',
+        },
+        mounted() {
+
+        },
+        methods: {
+            async onClone() {
+                let data = {link: this.linkClone};
+                try {
+                    const resClone = await axios.post('/clone', data);
+                    this.contentLoading = "Clone xong!"
+                    setTimeout(() => {
+                        this.loading = false;
+                    }, 1500)
+                } catch (error) {
+                    this.contentLoading = "Lỗi clone!"
+                    setTimeout(() => {
+                        this.loading = false;
+                    }, 1500)
+                }
+               
+            },
+        },
+    });
+</script>
+</html>

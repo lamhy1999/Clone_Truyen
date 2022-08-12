@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=6.0, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="http://static.truyenqq.net/template/frontend/styles/styles.css?v=4.1"/>
+    <link rel="stylesheet" type="text/css" href="http://static.truyenqq.net/template/frontend/styles/read.css?v=1.1"/>
+    <script src="http://static.truyenqq.net/template/frontend/scripts/main.js?v=4.6"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3ELF7ZVY70');
+        </script>
+    </head>
+<body>
+<input type="hidden" id="keyword-default" value="tổng tài">
+<div class="outsite ">
+    <section class="top-bar" id="home">
+    <div class="container">
+        <div class="level">
+            <div class="level-left pc">
+                <span class="logo">
+                    <a href="http://truyenqq.net/">Truyen QQ</a>
+                </span>
+                    <!-- /.logo -->
+                    <div class="top-search">
+                        <input type="text" class="text-search" placeholder="Bạn cứ nhập từ khoá, còn lại để qq lo"/>
+                        <button class="submit-btn btn_search"></button>
+                        <div class="list-results"><!-- Add class 'open' to open list results -->
+                            <div class="title-search">Tìm kiếm gần đây</div>
+                            <div class="list-container">
+
+                            </div>
+                        </div>
+                        <!-- /.list-results -->
+                    </div>
+                <!-- /.top-search -->
+            </div>
+            <div class="level-right">
+                <ul class="top-links pc">
+                    <li>
+                        <a href="http://truyenqq.net/lich-su.html">Lịch sử</a>
+                    </li>
+                    <li>
+                        <a href="http://truyenqq.net/truyen-dang-theo-doi.html">Theo dõi</a>
+                    </li>
+                </ul>
+                <!-- /.top-links -->
+
+                <div class="top-buttons has-login">
+                                            <script type="text/javascript">
+                            var login = 0;
+                            var user_id = 0;
+                            var urlSubcribe = "http://truyenqq.net/frontend/user/regiter-subscribe";
+                            var urlLike = "http://truyenqq.net/frontend/user/regiter-like";
+                            var urlLogin = "http://truyenqq.net/frontend/public/login";
+                            var urlRegister = "http://truyenqq.net/frontend/public/register";
+                            var urlForgot = "http://truyenqq.net/frontend/public/forgot";
+                        </script>
+                        <button class="login-btn">Đăng nhập</button>
+                        <button class="register-btn">Đăng ký</button>
+                                                            </div>
+                <!-- /.top-buttons -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.top-bar -->
+<div class="modal login-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <span class="top-caption">
+            Dù ai di ngược về xuôi,<br/>
+            đến giờ đọc truyện cứ vào QQ
+        </span>
+        <div>
+            <!-- /.top-caption -->
+            <div class="tabs-buttons">
+                <button data-type="login">Đăng nhập</button>
+                <button data-type="register">Đăng ký</button>
+            </div>
+            <!-- /.tabs-button -->
+            <div class="tabs-contents">
+                <div class="login-section">
+                    <div class="form-login">
+                            <input type="email" placeholder="Email" id="email_login"/>
+                            <input type="password" placeholder="Mật khẩu" id="password_login">
+                            <button type="submit" class="button_login btn btn-lg">Đăng nhập</button>
+                            <a href="javascript:void(0);" class="forget-password-link">Quên mật khẩu</a>
+
+                    </div>
+                    <div class="social-login">
+                        <span>Hoặc đăng nhập bằng:</span>
+                        <!--<a href="http://truyenqq.net/dang-nhap-facebook.html?url=http://truyenqq.net/truyen-tranh/vo-luyen-dinh-phong-3926" class="facebook-link"><span class="facebook-icon"></span></a>-->
+                        <a href="http://truyenqq.net/dang-nhap-google.html?url=http://truyenqq.net/truyen-tranh/vo-luyen-dinh-phong-3926" class="google-link"><span class="google-icon"></span></a>
+                    </div>
+                </div>
+                <!-- /.login-section -->
+                <div class="register-section">
+                    <div class="form-login">
+                        <input type="email" placeholder="Email" id="email_register"/>
+                        <input type="password" placeholder="Mật khẩu" id="password_register">
+                        <div class="login-captcha">
+                            <input type="text" class="form-control" id="captcha_register" name="captcha_register" placeholder="Mã xác nhận"/>
+                            <img src="http://static.truyenqq.net/template/frontend/images/logo.png" alt="Mã Xác Nhận"/>
+                            <span class="refresh-captcha" data-type="register"><i class="fas fa-sync-alt"></i></span>
+                            <input type="hidden" name="captcha-register" id="captcha-register" value="" />
+                        </div>
+
+                        <button type="submit" id="button_register">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.register-section -->
+        </div>
+        <!-- /.tabs-contents -->
+    </div>
+</div>
+<!-- /.login-modal -->
+<div class="modal notify-modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <span class="top-caption">
+            Quên mật khẩu hử !<br/>
+            Đã có QQ lo
+        </span>
+        <!-- /.top-caption -->
+        <div class="forget-password-section">
+            <span class="caption">Mật khẩu khôi phục sẽ được gởi qua email mà bạn đăng ký</span>
+            <div class="form-forgot">
+                <input type="email" placeholder="Email" id="email-forgot"/>
+                <div class="login-captcha">
+                    <input type="text" class="form-control" id="captcha_forgot" name="captcha_forgot" placeholder="Mã xác nhận"/>
+                    <img src="http://static.truyenqq.net/template/frontend/images/logo.png" alt="Mã Xác Nhận"/>
+                    <span class="refresh-captcha" data-type="forgot"><i class="fas fa-sync-alt"></i></span>
+                    <input type="hidden" name="captcha-register" id="captcha-forgot" value="" />
+                </div>
+                <button type="submit" id="button-forgot">Gửi mật khẩu</button>
+            </div>
+        </div>
+        <!-- /.forget-password-section -->
+        <div class="sent-password-section">
+            <span class="check-icon"></span>
+            <span class="caption">Mật khẩu khôi phục đã được gởi bạn hãy kiểm tra trong hộp thư</span>
+        </div>
+        <!-- /.sent-password-section -->
+        <a href="javascript:void(0);" class="back-to-login">Tôi muốn quay lại đăng nhập</a>
+        <!-- /.back-to-login -->
+    </div>
+</div>
+<!-- /.notify-modal -->
+    
+<section class="main-menu">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <div class="top-search smp">
+                        <input class="text-search" type="text" placeholder="Bạn cứ nhập từ khoá, còn lại để qq lo"/>
+                        <button class="submit-btn btn_search"></button>
+                        <div class="list-results">
+                        </div>
+                    </div>
+                    <a href="http://truyenqq.net/" class="navbar-item">Trang Chủ</a>
+                    <div class="navbar-item has-dropdown is-hoverable is-mega">
+                        <div class="navbar-link">Thể loại</div>
+                        <div class="navbar-dropdown ">
+                            <div class="container">
+                                <div class="level">
+                                    <div class="level-left mega-list-wrapper">
+                                        <div class="columns">
+                                                                                                    <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/action-26.html">Action</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/adult-68.html">Adult</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/adventure-27.html">Adventure</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/anime-62.html">Anime</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/chuyen-sinh-91.html">Chuyển Sinh</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/co-dai-90.html">Cổ Đại</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/comedy-28.html">Comedy</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/comic-60.html">Comic</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/demons-99.html">Demons</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/detective-100.html">Detective</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/doujinshi-96.html">Doujinshi</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/drama-29.html">Drama</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/dam-my-93.html">Đam Mỹ</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/ecchi-50.html">Ecchi</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/fantasy-30.html">Fantasy</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/gender-bender-45.html">Gender Bender</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/harem-47.html">Harem</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/historical-51.html">Historical</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/horror-44.html">Horror</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/huyen-huyen-468.html">Huyền Huyễn</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/isekai-85.html">Isekai</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/josei-54.html">Josei</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/mafia-69.html">Mafia</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/magic-58.html">Magic</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/manhua-35.html">Manhua</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/manhwa-49.html">Manhwa</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/martial-arts-41.html">Martial Arts</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/mature-48.html">Mature</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/military-101.html">Military</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/mystery-39.html">Mystery</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/ngon-tinh-87.html">Ngôn Tình</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/one-shot-95.html">One shot</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/psychological-40.html">Psychological</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/romance-36.html">Romance</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/school-life-37.html">School Life</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/sci-fi-43.html">Sci-fi</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/seinen-42.html">Seinen</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/shoujo-38.html">Shoujo</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/shoujo-ai-98.html">Shoujo Ai</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/shounen-31.html">Shounen</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/shounen-ai-86.html">Shounen Ai</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/slice-of-life-46.html">Slice of life</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/smut-97.html">Smut</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/sports-57.html">Sports</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/supernatural-32.html">Supernatural</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/tragedy-52.html">Tragedy</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/trong-sinh-82.html">Trọng Sinh</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/truyen-mau-92.html">Truyện Màu</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/webtoon-55.html">Webtoon</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                                            <div class="column column-menu">
+                                                        <ul class="mega-list">
+                                                        <li><a href="http://truyenqq.net/the-loai/xuyen-khong-88.html">Xuyên Không</a></li>
+                                                                                                                <li><a href="http://truyenqq.net/the-loai/yaoi-70.html">Yaoi</a></li>
+                                                                                                            <li><a href="http://truyenqq.net/the-loai/yuri-75.html">Yuri</a></li>
+                                                        </ul>
+                                                        </div>
+                                                                                            </div>
+                                    </div>
+                                    <div class="level-right pc">
+                                        <img src="http://static.truyenqq.net/template/frontend/images/menu-icon.jpg" class="mega-menu-cover" alt="img"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable is-mega">
+                        <div class="navbar-link">Sắp Xếp</div>
+                        <div class="navbar-dropdown ">
+                            <div class="container">
+                                <div class="level">
+                                    <div class="level-left mega-list-wrapper">
+                                        <div class="columns">
+                                            <div class="column">
+                                                <ul class="mega-list">
+                                                    <li><a href="http://truyenqq.net/top-ngay.html">Top Ngày</a></li>
+                                                    <li><a href="http://truyenqq.net/top-tuan.html">Top Tuần</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="column">
+                                                <ul class="mega-list">
+                                                    <li><a href="http://truyenqq.net/top-thang.html">Top Tháng</a></li>
+                                                    <li><a href="http://truyenqq.net/truyen-yeu-thich.html">Yêu Thích</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="column">
+                                                <ul class="mega-list">
+                                                    <li><a href="http://truyenqq.net/truyen-moi-cap-nhat.html">Mới Cập Nhật</a></li>
+                                                    <li><a href="http://truyenqq.net/truyen-tranh-moi.html">Truyện Mới</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="column">
+                                                <ul class="mega-list">
+                                                    <li><a href="http://truyenqq.net/truyen-hoan-thanh.html">Truyện Full</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="http://truyenqq.net/truyen-con-gai.html" class="navbar-item">Con Gái</a>
+                    <a href="http://truyenqq.net/truyen-con-trai.html" class="navbar-item">Con Trai</a>
+                    <a href="http://truyenqq.net/tim-kiem-nang-cao.html" class="navbar-item">Tìm Truyện</a>
+		    <a rel="nofollow" href="http://truyenqq.net/lich-su.html" class="navbar-item">Lịch Sử</a>
+                    <a rel="nofollow" href="http://truyenqq.net/truyen-dang-theo-doi.html" class="navbar-item">Theo Dõi</a>
+                    <a rel="nofollow" href="https://www.facebook.com/groups/438911163131883" target="_blank" class="navbar-item">Thảo Luận</a>
+                    <a rel="nofollow" href="https://www.facebook.com/truyenqq.page" target="_blank" class="navbar-item">Fanpage</a>
+                    <a rel="nofollow" href="https://truyenqq.net/tin-tuc/tuyen-nhan-su.html" target="_blank" class="navbar-item">Tuyển Nhân Sự</a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+    
+    
+<section class="main-content">
+    <div class="container has-background-white story-detail">
+        <div id="path">
+            <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemprop="item" href="/">
+        <span itemprop="name">Trang Chủ</span>
+      </a>
+      <meta itemprop="position" content="1" />
+  </li>
+  <% info.forEach(function(mv){%>
+  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a itemprop="item" href="/truyen-tranh/<%=mv.slug%>">
+        <span itemprop="name"><%=mv.ten%></span>
+      </a>
+      <meta itemprop="position" content="2" />
+  </li>
+</ol>        </div>
+        <div class="block01">
+            
+
+            <div class="left"><img src="<%=mv.mangaThumb.thumb%>" alt="Võ Luyện Đỉnh Phong" /></div>
+            <div class="center" itemscope="" itemtype="http://schema.org/Book">
+                <h1 itemprop="name"><%=mv.ten%></h1>
+                <div class="txt">
+                                        <p class="info-item"><a class="org" href="http://truyenqq.net/tac-gia/dang-cap-nhat-239.html"><%=mv.tacgia%></a></p>
+                    <p class="info-item"><%=mv.tinhtrang%></p>
+                    <div>
+                        <span>Thống kê:</span>
+                        <span class="sp01"><i class="fas fa-thumbs-up"></i> <span class="sp02 number-like"><%=mv.likes%></span></span>
+                        <span class="sp01"><i class="fas fa-heart"></i> <span class="sp02"><%=mv.views%></span></span>
+                        <span class="sp01"><i class="fas fa-eye"></i> <span class="sp02"><%=mv.tym%></span></span>
+                    </div>
+                </div>
+                <ul class="list01">
+                    <li class="li03"><a href="http://truyenqq.net/the-loai/action-26.html">Action</a></li><li class="li03"><a href="http://truyenqq.net/the-loai/fantasy-30.html">Fantasy</a></li><li class="li03"><a href="http://truyenqq.net/the-loai/shounen-31.html">Shounen</a></li><li class="li03"><a href="http://truyenqq.net/the-loai/supernatural-32.html">Supernatural</a></li><li class="li03"><a href="http://truyenqq.net/the-loai/manhua-35.html">Manhua</a></li>                </ul>
+                <ul class="story-detail-menu">
+                    
+                    <li class="li01">
+                        <%for(var i=0;i< chap.length;i++){ %>
+                        <a href="/truyen-tranh/<%=chap[i].slugManga%>/<%= chap[chap.length-1].slug %>" 
+                            <% }%>
+                            class="button is-danger is-rounded"><span class="btn-read"></span>Đọc từ đầu</a>
+
+                    </li>
+                  
+
+                    <li class="li02"><a href="javascript:void(0);" class="button is-danger is-rounded btn-subscribe subscribeBook" data-page="index" data-id="3926"><span class="fas fa-heart"></span>Theo dõi</a></li>
+                    <li class="li03"><a href="javascript:void(0);" class="button is-danger is-rounded btn-like" data-id="3926"><span class="fas fa-thumbs-up"></span>Thích</a></li>
+                                            <li class="li04"><a href="http://truyenqq.net/truyen-tranh/vo-luyen-dinh-phong-3926-chap-1328.html" class="button is-info is-rounded"><span class="btn-request"></span>Đọc tiếp</a></li>
+                                    </ul>
+                <div class="txt txt01 story-detail-info" itemprop="description">
+                    <p><%=mv.mota%></p>
+                </div>
+            </div>
+       <% })%>
+        </div>
+                       
+        <div class="block02">
+            <div class="title">
+                <h2 class="story-detail-title">Danh sách chương</h2>
+            </div>
+            <div class="box">
+                <div class="works-chapter-list">
+                    <% chap.forEach(( index) => { %>
+                    <div class="works-chapter-item row">
+    <div class="col-md-10 col-sm-10 col-xs-8 ">
+        <a target="_blank" href="/truyen-tranh/<%=index.slugManga%>/<%=index.slug%>"><%= index.tenChapter %></a>
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-4 text-right"><%=index.updatedAt.split(" ")[1]%></div>
+</div>
+<%})%>
+            </div>
+        </div>
+                <input type="hidden" id="book_id" value="3926" />
+        <input type="hidden" id="total_page" value="285" />
+        <input type="hidden" id="current_page" value="1" />
+        <input type="hidden" id="id_textarea" value="" />
+        <input type="hidden" id="parent_id" value="" />
+        <input type="hidden" id="episode_name" value="" />
+        <input type="hidden" id="episode_id" value="" />
+        <input type="hidden" id="slug" value="vo-luyen-dinh-phong" />
+        
+    </div>
+</section>
+     <section class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-left">
+                <div class="col-sm-4 text-center" itemscope="" itemtype="http://schema.org/Organization">
+                    <a itemprop="url" href="//truyenqq.net">
+                        <img itemprop="logo" src="//static.truyenqq.net/template/frontend/images/logo.png" alt="TruyenQQ - Truyện tranh Online">
+                    </a>
+                </div>
+                <div class="text-footer">Copyright © 2019 - All Rights Reserved. Quảng cáo: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7b6b3f9a3a5a2aeb2b9a6a697b0bab6bebbf9b4b8ba">[email&#160;protected]</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+</html>

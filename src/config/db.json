@@ -1,0 +1,3 @@
+{
+  "DB_CONNECTION_DEV":"mongodb://localhost:27017/truyentop"
+}
